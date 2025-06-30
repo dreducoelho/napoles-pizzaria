@@ -24,6 +24,7 @@ const useStoredState = (key, initialValue) => {
 };
 
 const NapolesPizzaria = () => {
+  const [showCartModal, setShowCartModal] = useState(false);
   const [currentView, setCurrentView] = useState('home'); // home, menu, product, cart, checkout
   const [selectedCategory, setSelectedCategory] = useState('Todas');
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -37,7 +38,7 @@ const NapolesPizzaria = () => {
         priceGrande: 58.00,
         priceBroto: 42.00,
         category: 'Pizzas',
-        image: 'keys/pizza-alema?prompt=Pizza%20with%20cheese%20and%20german%20sausage'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 2,
@@ -46,7 +47,7 @@ const NapolesPizzaria = () => {
         priceGrande: 54.00,
         priceBroto: 39.00,
         category: 'Pizzas',
-        image: 'keys/pizza-alho?prompt=Pizza%20with%20mozzarella%20and%20fried%20garlic'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 3,
@@ -55,7 +56,7 @@ const NapolesPizzaria = () => {
         priceGrande: 59.00,
         priceBroto: 43.00,
         category: 'Pizzas',
-        image: 'keys/pizza-alvorada?prompt=Pizza%20with%20escarole%20ham%20palm%20hearts%20mozzarella%20peas'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 4,
@@ -64,7 +65,7 @@ const NapolesPizzaria = () => {
         priceGrande: 59.00,
         priceBroto: 43.00,
         category: 'Pizzas',
-        image: 'keys/pizza-amoda?prompt=Pizza%20with%20shredded%20chicken%20mozzarella%20catupiry%20mushrooms'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 5,
@@ -73,7 +74,7 @@ const NapolesPizzaria = () => {
         priceGrande: 58.00,
         priceBroto: 42.00,
         category: 'Pizzas',
-        image: 'keys/pizza-argentina?prompt=Pizza%20with%20shredded%20chicken%20escarole%20catupiry'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 6,
@@ -82,7 +83,7 @@ const NapolesPizzaria = () => {
         priceGrande: 58.00,
         priceBroto: 42.00,
         category: 'Pizzas',
-        image: 'keys/pizza-americana?prompt=Pizza%20with%20shredded%20chicken%20potato%20sticks%20mozzarella'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 7,
@@ -91,7 +92,7 @@ const NapolesPizzaria = () => {
         priceGrande: 57.00,
         priceBroto: 41.00,
         category: 'Pizzas',
-        image: 'keys/pizza-atum?prompt=Pizza%20with%20tuna%20and%20sliced%20onion'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 8,
@@ -100,7 +101,7 @@ const NapolesPizzaria = () => {
         priceGrande: 56.00,
         priceBroto: 40.00,
         category: 'Pizzas',
-        image: 'keys/pizza-bacon?prompt=Pizza%20with%20bacon%20and%20mozzarella'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 9,
@@ -109,7 +110,7 @@ const NapolesPizzaria = () => {
         priceGrande: 58.00,
         priceBroto: 42.00,
         category: 'Pizzas',
-        image: 'keys/pizza-baiana?prompt=Spicy%20pizza%20with%20pepperoni%20peppers%20eggs%20onion%20mozzarella'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 10,
@@ -118,7 +119,7 @@ const NapolesPizzaria = () => {
         priceGrande: 53.00,
         priceBroto: 38.00,
         category: 'Pizzas',
-        image: 'keys/pizza-bauru?prompt=Pizza%20with%20ham%20mozzarella%20tomato'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 11,
@@ -127,7 +128,7 @@ const NapolesPizzaria = () => {
         priceGrande: 58.00,
         priceBroto: 42.00,
         category: 'Pizzas',
-        image: 'keys/pizza-brasiliense?prompt=Pizza%20with%20pepperoni%20onion%20provolone%20cheddar'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 12,
@@ -136,7 +137,7 @@ const NapolesPizzaria = () => {
         priceGrande: 59.00,
         priceBroto: 43.00,
         category: 'Pizzas',
-        image: 'keys/pizza-becel?prompt=Pizza%20with%20canadian%20bacon%20corn%20mozzarella%20catupiry'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 13,
@@ -145,7 +146,7 @@ const NapolesPizzaria = () => {
         priceGrande: 58.00,
         priceBroto: 42.00,
         category: 'Pizzas',
-        image: 'keys/pizza-brocolis?prompt=Pizza%20with%20broccoli%20mushrooms%20mozzarella'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 14,
@@ -154,7 +155,7 @@ const NapolesPizzaria = () => {
         priceGrande: 59.00,
         priceBroto: 43.00,
         category: 'Pizzas',
-        image: 'keys/pizza-brocolis-alho?prompt=Pizza%20with%20broccoli%20fried%20garlic%20mozzarella'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 15,
@@ -163,7 +164,7 @@ const NapolesPizzaria = () => {
         priceGrande: 49.00,
         priceBroto: 35.00,
         category: 'Pizzas',
-        image: 'keys/pizza-calabresa?prompt=Classic%20pepperoni%20pizza%20with%20onion'
+        image: 'https://i.imgur.com/o9EcVKV.jpg'
       },
       {
         id: 16,
@@ -1725,7 +1726,8 @@ const NapolesPizzaria = () => {
     { name: 'Grande', key: 'grande' }
   ];
 
-  const pizzariaPhone = '5511999999999'; // Número do WhatsApp da pizzaria
+  const pizzariaPhone = '5511942545151
+  '; // Número do WhatsApp da pizzaria
 
   // Verificar se há parâmetro admin na URL
   useEffect(() => {
@@ -1832,7 +1834,7 @@ const NapolesPizzaria = () => {
     };
     setCartItems([...cartItems, item]);
     resetProductSelection();
-    setCurrentView('menu');
+    setShowCartModal(true);
   };
 
   const resetProductSelection = () => {
@@ -1906,7 +1908,7 @@ const NapolesPizzaria = () => {
     
     // Resumo financeiro
     const subtotal = getTotalPrice();
-    const taxaEntrega = deliveryOption === 'entrega' ? 5.00 : 0;
+    const taxaEntrega = deliveryOption === 'entrega' ? 9.00 : 0;
     const total = subtotal + taxaEntrega;
     
     mensagem += `*💰 RESUMO:*\n`;
@@ -3089,7 +3091,7 @@ const NapolesPizzaria = () => {
                     />
                     <div className="flex-1">
                       <span className="font-medium">🚚 Entrega</span>
-                      <p className="text-sm text-gray-600">Taxa de entrega: R$ 5,00</p>
+                      <p className="text-sm text-gray-600">Taxa de entrega: R$ 9,00</p>
                     </div>
                   </label>
                   <label className="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50">
@@ -3286,13 +3288,13 @@ const NapolesPizzaria = () => {
                   {deliveryOption === 'entrega' && (
                     <div className="flex justify-between">
                       <span>Taxa de entrega:</span>
-                      <span>R$ 5,00</span>
+                      <span>R$ 9,00</span>
                     </div>
                   )}
                   <hr className="my-2" />
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total:</span>
-                    <span className="text-green-700">R$ {(getTotalPrice() + (deliveryOption === 'entrega' ? 5 : 0)).toFixed(2)}</span>
+                    <span className="text-green-700">R$ {(getTotalPrice() + (deliveryOption === 'entrega' ? 9 : 0)).toFixed(2)}</span>
                   </div>
                 </div>
               </div>
@@ -3368,6 +3370,59 @@ const NapolesPizzaria = () => {
       </div>
     );
   }
+
+    {showCartModal && (
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
+      <div className="bg-white p-8 rounded-xl shadow-2xl text-center w-11/12 max-w-sm">
+        <h3 className="text-xl font-bold text-gray-800 mb-4">Produto Adicionado!</h3>
+        <p className="text-gray-600 mb-6">Seu item está no carrinho. O que deseja fazer?</p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button
+            onClick={() => {
+              setShowCartModal(false);
+              setCurrentView('cart');
+            }}
+            className="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-transform transform hover:scale-105"
+          >
+            Ir para o Carrinho
+          </button>
+          <button
+            onClick={() => setShowCartModal(false)}
+            className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-transform transform hover:scale-105"
+          >
+            Continuar Comprando
+          </button>
+        </div>
+      </div>
+    </div>
+  )}
+
+    {showCartModal && (
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
+      <div className="bg-white p-8 rounded-xl shadow-2xl text-center w-11/12 max-w-sm">
+        <h3 className="text-xl font-bold text-gray-800 mb-4">Produto Adicionado!</h3>
+        <p className="text-gray-600 mb-6">Seu item está no carrinho. O que deseja fazer?</p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button
+            onClick={() => {
+              setShowCartModal(false);
+              setCurrentView('cart');
+            }}
+            className="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-transform transform hover:scale-105"
+          >
+            Ir para o Carrinho
+          </button>
+          <button
+            onClick={() => setShowCartModal(false)}
+            className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-transform transform hover:scale-105"
+          >
+            Continuar Comprando
+          </button>
+        </div>
+      </div>
+    </div>
+  )}
+
 
   return null;
 };
