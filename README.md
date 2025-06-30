@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### 🏠 **Tela Inicial**
 - **Escolha de tipo de pizza**: Pizza inteira, meio a meio ou 3 sabores
 - **Informações da pizzaria**: Avaliações, endereço e contatos
@@ -272,3 +273,7 @@ Nápoles Pizzaria
 
 
 ⭐ Desenvolvido com ❤️ para a melhor experiência de pedidos online!
+=======
+# napoles-pizzaria
+Menu Digital Pizzaria Napoles
+>>>>>>> 7b8d7c05784f7b2e285710e3755d439ec3d5757c
