@@ -1726,8 +1726,7 @@ const NapolesPizzaria = () => {
     { name: 'Grande', key: 'grande' }
   ];
 
-  const pizzariaPhone = '5511942545151
-  '; // Número do WhatsApp da pizzaria
+    const pizzariaPhone = '5511942545151'; // Número do WhatsApp da pizzaria
 
   // Verificar se há parâmetro admin na URL
   useEffect(() => {
